@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class ShowText : MonoBehaviour
 {
     [SerializeField] Text textElement;
-    [SerializeField] int fuel = 100;
+    [SerializeField] float fuel = 100;
+    
 
     public Movement movement;
 
@@ -14,6 +15,7 @@ public class ShowText : MonoBehaviour
     void Start()
     {
         movement = GetComponent<Movement>();
+        gameObject.tag = "Refull Station";
     }
 
     // Update is called once per frame
@@ -40,5 +42,20 @@ public class ShowText : MonoBehaviour
             
         }
     }
+
+    private void OnCollisionStay(Collision other) 
+    {
+        if (other.gameObject.tag == "Refull Station") 
+        {
+            if (fuel < 2001) 
+            {
+                textElement.text = "Fuel: " + fuel;
+                fuel++;
+            }
+        }    
+    }
+
+
+
 
 }

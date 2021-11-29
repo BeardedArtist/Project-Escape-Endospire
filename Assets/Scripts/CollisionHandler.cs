@@ -40,7 +40,12 @@ public class CollisionHandler : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.C)) 
         {
             collisionDisabled = !collisionDisabled; // toggle collision
-        } 
+        }
+
+        else if (Input.GetKeyDown(KeyCode.Escape)) 
+        {
+            SceneManager.LoadScene("Start Menu");
+        }
     }
 
     private void OnCollisionEnter(Collision other) 
@@ -54,7 +59,9 @@ public class CollisionHandler : MonoBehaviour
         {
             // "Friendly" refers to the tag given to the landing pad.
             case "Friendly":
-                Debug.Log("You're on the landing pad!");
+                break;
+
+            case "Refull Station":
                 break;
 
             // "Finish" refers to the tag given to the landing pad.

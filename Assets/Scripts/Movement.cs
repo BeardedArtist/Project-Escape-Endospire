@@ -37,6 +37,11 @@ public class Movement : MonoBehaviour
     {
         ProcessThrust();
         ProcessRotation();
+
+        if ((rb != null) && rb.IsSleeping()) 
+        {
+            rb.WakeUp();
+        }
     }
 
 
