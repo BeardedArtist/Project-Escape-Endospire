@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Friendly
   - Refull Station
+  - ReloadLevelWall
   layers:
   - Default
   - TransparentFX

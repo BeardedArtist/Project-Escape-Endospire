@@ -69,6 +69,11 @@ public class CollisionHandler : MonoBehaviour
                 StartGoalSequence();
                 break;
 
+            // "ReloadLevelWall" refers to the invisible wall that will reload the level when collided.
+            case "ReloadLevelWall":
+                ReloadLevel();
+                break;
+
             // default refers to the rest of the objects with no tags that will result in damage to the player
 
             default:
