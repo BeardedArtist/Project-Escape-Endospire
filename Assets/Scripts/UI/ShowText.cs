@@ -6,7 +6,11 @@ using UnityEngine.UI;
 public class ShowText : MonoBehaviour
 {
     [SerializeField] Text textElement;
-    [SerializeField] float fuel = 100;
+    [SerializeField] public float fuel = 3500;
+    public float currentFuel;
+
+
+    public FuelBar fuelBar;
     
 
     public Movement movement;
@@ -16,6 +20,8 @@ public class ShowText : MonoBehaviour
     {
         movement = GetComponent<Movement>();
         gameObject.tag = "Refull Station";
+        currentFuel = fuel;
+        fuelBar.SetMaxFuel(fuel);
     }
 
     // Update is called once per frame
@@ -26,16 +32,17 @@ public class ShowText : MonoBehaviour
 
     void FuelCounter() 
     {
-        if (Input.GetKey(KeyCode.Space)) 
+        if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) 
         {
-            if (fuel >= 1) 
+            if (currentFuel >= 1) 
             {
-                textElement.text = "Fuel: " + fuel;
-                fuel--;
+                textElement.text = "Fuel: " + currentFuel;
+                currentFuel = fuel--;
+                fuelBar.SetFuel(currentFuel);
             }
             else 
             {
-                textElement.text = "No Fuel!";
+                //textElement.text = "No Fuel!";
                 movement.enabled = false;
                 movement.StopBoosting();
             }
@@ -47,7 +54,7 @@ public class ShowText : MonoBehaviour
     {
         if (other.gameObject.tag == "Refull Station") 
         {
-            if (fuel < 2001) 
+            if (fuel < 3000) 
             {
                 textElement.text = "Fuel: " + fuel;
                 fuel++;

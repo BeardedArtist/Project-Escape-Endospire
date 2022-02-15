@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 5.unity
     guid: 10aedd8d0123fb24eb9ee936fb92cfd6
   - enabled: 1
-    path: Assets/Scenes/Win Screen.unity
+    path: Assets/Scenes/WinScreen.unity
     guid: 1035c9bcc5f1206488472d0ade5aa8e0
   - enabled: 0
     path: 

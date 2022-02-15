@@ -9662,6 +9662,7 @@ GameObject:
   m_Component:
   - component: {fileID: 941101374}
   - component: {fileID: 941101373}
+  - component: {fileID: 941101376}
   m_Layer: 0
   m_Name: BG Music
   m_TagString: Untagged
@@ -9779,6 +9780,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &941101376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941101372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767ab2a976945bd478394a49211f8204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WinScreen: WinScreen
+  musicToStop: {fileID: 8300000, guid: 9358af6beca604c828d9eaa9a5cf256c, type: 3}
 --- !u!4 &942557644 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: a4181c3067a7a5c448ec8fca35647597, type: 3}
@@ -11374,6 +11389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textElement: {fileID: 0}
   fuel: 100
+  fuelTank: 0
   movement: {fileID: 0}
 --- !u!1001 &1104064214
 PrefabInstance:

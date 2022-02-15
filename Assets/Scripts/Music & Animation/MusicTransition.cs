@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MusicTransition : MonoBehaviour
 {
+    
     private static MusicTransition instance;
 
     void Awake() 
@@ -12,6 +14,11 @@ public class MusicTransition : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(instance);
+
+            if (SceneManager.GetActiveScene().name == "WinScreen")
+                {
+                    Destroy(gameObject);
+                }
         }
         else
         { 
