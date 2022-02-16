@@ -11,8 +11,6 @@ public class ShowText : MonoBehaviour
 
 
     public FuelBar fuelBar;
-    
-
     public Movement movement;
 
     // Start is called before the first frame update
@@ -57,9 +55,10 @@ public class ShowText : MonoBehaviour
             if (fuel < 3000) 
             {
                 textElement.text = "Fuel: " + fuel;
-                fuel++;
+                currentFuel = fuel++;
+                fuelBar.SetFuel(currentFuel);
             }
-        }    
+        }
     }
 
 

@@ -5628,7 +5628,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 23.7, y: -16.8}
+  m_AnchoredPosition: {x: 23.7, y: -19.699999}
   m_SizeDelta: {x: 248.05957, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &509018061
@@ -7603,7 +7603,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 0.41
+  m_Intensity: 0.1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -9684,7 +9684,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.486
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -9793,7 +9793,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WinScreen: WinScreen
-  musicToStop: {fileID: 8300000, guid: 9358af6beca604c828d9eaa9a5cf256c, type: 3}
 --- !u!4 &942557644 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: a4181c3067a7a5c448ec8fca35647597, type: 3}
@@ -11389,7 +11388,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textElement: {fileID: 0}
   fuel: 100
-  fuelTank: 0
+  currentFuel: 0
+  fuelBar: {fileID: 0}
   movement: {fileID: 0}
 --- !u!1001 &1104064214
 PrefabInstance:
@@ -15419,7 +15419,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20.400003, y: -40.9}
+  m_AnchoredPosition: {x: 20.400003, y: -43.8}
   m_SizeDelta: {x: 157.36441, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1436709863
@@ -15563,7 +15563,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20.4, y: -64.5}
+  m_AnchoredPosition: {x: 20.4, y: -67.4}
   m_SizeDelta: {x: 157.36441, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1438840974
@@ -19534,7 +19534,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "You've proved you're a skilled and capable pilot. \n\nWelcome to the team!"
+  m_text: 'You''ve proved you''re a skilled and capable pilot. Your next mission
+    will be assigned to you shortly!
+
+
+    Welcome to the team!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

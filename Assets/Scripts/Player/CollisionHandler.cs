@@ -38,17 +38,17 @@ public class CollisionHandler : MonoBehaviour
 
     void DebugKeysAction() 
     {
-        if (Input.GetKeyDown(KeyCode.L)) 
-        {
-            LoadNextLevel();
-        }
+        // if (Input.GetKeyDown(KeyCode.L)) 
+        // {
+        //     LoadNextLevel();
+        // }
         
-        else if (Input.GetKeyDown(KeyCode.C)) 
-        {
-            collisionDisabled = !collisionDisabled; // toggle collision
-        }
+        // else if (Input.GetKeyDown(KeyCode.C)) 
+        // {
+        //     collisionDisabled = !collisionDisabled; // toggle collision
+        // }
 
-        else if (Input.GetKeyDown(KeyCode.Escape)) 
+        if (Input.GetKeyDown(KeyCode.Escape)) 
         {
             SceneManager.LoadScene("Start Menu");
         }
