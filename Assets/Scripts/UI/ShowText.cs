@@ -52,10 +52,12 @@ public class ShowText : MonoBehaviour
     {
         if (other.gameObject.tag == "Refull Station") 
         {
-            if (fuel < 3000) 
+            if (fuel < 3500) 
             {
                 textElement.text = "Fuel: " + fuel;
-                currentFuel = fuel++;
+                fuel += 250 * Time.deltaTime;
+                currentFuel = fuel;
+                //currentFuel = fuel++;
                 fuelBar.SetFuel(currentFuel);
             }
         }
